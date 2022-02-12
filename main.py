@@ -60,7 +60,7 @@ def check_question_response(top, answer_placeholder, question, var):
         if clue_counter == 3:
             answer_radio_button = "!radiobutton" + ("" if ans == '1' else ans)
             answer_radio_button = top.nametowidget(answer_radio_button)
-            answer_radio_button.cofnfigure(bg="#03fc30")
+            answer_radio_button.configure(bg="#03fc30")
             answer_placeholder.config(text="Answer: " + question[f'choice{question["answer"]}'])
             top.nametowidget('!button').pack_forget()
             Button(top, text="Next", command=top.destroy).pack()
